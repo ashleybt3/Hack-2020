@@ -86,18 +86,54 @@ class Development {
         }
         else if mood == "1"
         {
-            garden.last?.grow()
-            garden.last?.grow()
-            garden.last?.grow()
+            let flower_growth = garden.last?.stage
+            if flower_growth! + 3 > 6
+            {
+                while flower_growth! <= 6
+                {
+                    garden.last?.grow()
+                }
+                garden.append(Flower())
+            }
+            else
+            {
+                garden.last?.grow()
+                garden.last?.grow()
+                garden.last?.grow()
+            }
         }
         else if mood == "2"
         {
+            let flower_growth = garden.last?.stage
+            if flower_growth! + 2 > 6
+            {
+                while flower_growth! <= 6
+                {
+                    garden.last?.grow()
+                }
+                garden.append(Flower())
+            }
+            else
+            {
             garden.last?.grow()
             garden.last?.grow()
+            }
         }
         else if mood == "3"
         {
+            let flower_growth = garden.last?.stage
+            if flower_growth! + 1 > 6
+            {
+                while flower_growth! <= 6
+                {
+                    garden.last?.grow()
+                }
+                garden.append(Flower())
+            }
+            else
+            {
             garden.last?.grow()
+            }
         }
     }
     
